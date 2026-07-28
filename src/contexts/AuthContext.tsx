@@ -28,9 +28,12 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [loading, setLoading] = useState(true);
   const [appleAvailable, setAppleAvailable] = useState(false);
 
+  // expo-auth-session's web flow throws synchronously at render time if webClientId is missing --
+  // fall back to a placeholder so an unconfigured OAuth client degrades to a failed sign-in attempt
+  // instead of crashing the whole app before Settings/README even loads.
   const [, googleResponse, promptGoogleAsync] = Google.useIdTokenAuthRequest({
     iosClientId: process.env.EXPO_PUBLIC_GOOGLE_IOS_CLIENT_ID,
-    webClientId: process.env.EXPO_PUBLIC_GOOGLE_WEB_CLIENT_ID,
+    webClientId: process.env.EXPO_PUBLIC_GOOGLE_WEB_CLIENT_ID || 'not-configured',
   });
 
   const refreshProfile = useCallback(async () => {

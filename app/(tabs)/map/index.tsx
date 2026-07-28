@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { ActivityIndicator, ScrollView, StyleSheet, Text, View } from 'react-native';
-import MapView, { Marker, PROVIDER_GOOGLE } from 'react-native-maps';
 import * as Location from 'expo-location';
 import { useRouter } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import { useNearbyVenues } from '@/hooks/useNearbyVenues';
 import { useCheckIn } from '@/contexts/CheckInContext';
 import { Chip } from '@/components/Chip';
+import { PlatformMap } from '@/components/PlatformMap';
 import { VENUE_CATEGORY_META, haversineMeters } from '@/lib/utils';
 import { colors, radius, spacing, typography } from '@/lib/theme';
 import type { VenueCategory } from '@/lib/database.types';
@@ -58,23 +58,13 @@ export default function MapScreen() {
         ))}
       </ScrollView>
 
-      <MapView
-        provider={PROVIDER_GOOGLE}
-        style={styles.map}
-        initialRegion={{ ...region, latitudeDelta: 0.02, longitudeDelta: 0.02 }}
-        showsUserLocation
-      >
-        {venues.map((v) => (
-          <Marker
-            key={v.id}
-            coordinate={{ latitude: v.latitude, longitude: v.longitude }}
-            title={v.venue_name}
-            description={`${Math.round(haversineMeters(region.latitude, region.longitude, v.latitude, v.longitude))}m away`}
-            pinColor={activeCheckIn?.venue_id === v.id ? colors.secondaryAccent : colors.accent}
-            onPress={() => router.push(`/(tabs)/map/venue/${v.id}`)}
-          />
-        ))}
-      </MapView>
+      <PlatformMap
+        region={region}
+        venues={venues}
+        activeVenueId={activeCheckIn?.venue_id}
+        onMarkerPress={(venueId) => router.push(`/(tabs)/map/venue/${venueId}`)}
+        distanceLabel={(v) => `${Math.round(haversineMeters(region.latitude, region.longitude, v.latitude, v.longitude))}m away`}
+      />
 
       {loading && (
         <View style={styles.loadingPill}>
@@ -90,7 +80,6 @@ const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: colors.background },
   centered: { flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: colors.background, gap: spacing.sm },
   centeredText: { ...typography.caption },
-  map: { flex: 1 },
   chipScroll: { flexGrow: 0, backgroundColor: colors.surface, borderBottomWidth: 1, borderBottomColor: colors.border },
   chipRow: { padding: spacing.md, gap: spacing.sm },
   banner: {

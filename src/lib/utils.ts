@@ -47,6 +47,7 @@ export const RPC_ERROR_MESSAGES: Record<string, string> = {
   CONVERSATION_LIMIT_REACHED: 'Free accounts can have 3 active conversations. End one or upgrade to Premium.',
   MATCH_NOT_ACTIVE: "This match is no longer active.",
   NOT_ALLOWED: "You can't do that.",
+  PREMIUM_REQUIRED: 'This is a Premium feature.',
 };
 
 export function friendlyRpcError(error: { message?: string } | null | undefined): string {

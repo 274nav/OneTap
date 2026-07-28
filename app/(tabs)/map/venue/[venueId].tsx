@@ -3,19 +3,18 @@ import { ActivityIndicator, Alert, FlatList, StyleSheet, Text, View } from 'reac
 import { useLocalSearchParams } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import { supabase } from '@/lib/supabase';
-import { useAuth } from '@/contexts/AuthContext';
 import { useCheckIn } from '@/contexts/CheckInContext';
 import { Avatar } from '@/components/Avatar';
 import { Button } from '@/components/Button';
 import { Card } from '@/components/Card';
 import { EmptyState } from '@/components/EmptyState';
-import { VENUE_CATEGORY_META, friendlyRpcError } from '@/lib/utils';
+import { VENUE_CATEGORY_META } from '@/lib/utils';
+import { useSendLike } from '@/hooks/useSendLike';
 import { colors, spacing, typography } from '@/lib/theme';
 import type { VenueActiveUser, VenueRow } from '@/lib/database.types';
 
 export default function VenueDetailScreen() {
   const { venueId } = useLocalSearchParams<{ venueId: string }>();
-  const { session } = useAuth();
   const { activeCheckIn, checkIn, checkOut } = useCheckIn();
 
   const [venue, setVenue] = useState<VenueRow | null>(null);
@@ -59,12 +58,7 @@ export default function VenueDetailScreen() {
     setBusy(false);
   };
 
-  const handleLike = async (toUser: string) => {
-    if (!session?.user) return;
-    const { error } = await supabase.from('likes').insert({ from_user: session.user.id, to_user: toUser });
-    if (error) return Alert.alert('Could not send like', friendlyRpcError(error));
-    setLikedIds((prev) => new Set(prev).add(toUser));
-  };
+  const handleLike = useSendLike((toUser) => setLikedIds((prev) => new Set(prev).add(toUser)));
 
   if (!venue) {
     return (

@@ -8,6 +8,7 @@ import { Card } from '@/components/Card';
 import { Chip } from '@/components/Chip';
 import { EmptyState } from '@/components/EmptyState';
 import { calculateAge, friendlyRpcError } from '@/lib/utils';
+import { useSendLike } from '@/hooks/useSendLike';
 import { colors, spacing, typography } from '@/lib/theme';
 import type { LikeRow, ReportReason, UserRow } from '@/lib/database.types';
 
@@ -52,12 +53,8 @@ export default function MatchesScreen() {
     };
   }, [session?.user, load]);
 
-  const likeBack = async (like: LikeWithProfile) => {
-    if (!session?.user) return;
-    const { error } = await supabase.from('likes').insert({ from_user: session.user.id, to_user: like.from_user });
-    if (error) return Alert.alert('Could not like back', friendlyRpcError(error));
-    load();
-  };
+  const sendLike = useSendLike(load);
+  const likeBack = (like: LikeWithProfile) => sendLike(like.from_user);
 
   const reject = async (like: LikeWithProfile) => {
     const { error } = await supabase.from('likes').update({ status: 'rejected' }).eq('id', like.id);

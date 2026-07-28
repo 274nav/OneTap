@@ -33,6 +33,9 @@ export default function ProfileScreen() {
       </View>
 
       <View style={styles.actions}>
+        {!profile.premium && (
+          <Button label="Go Premium" onPress={() => router.push('/(tabs)/profile/premium')} />
+        )}
         <Button label="Edit Profile" variant="secondary" onPress={() => router.push('/(tabs)/profile/edit')} />
         <Button label="Settings" variant="ghost" onPress={() => router.push('/(tabs)/profile/settings')} />
       </View>

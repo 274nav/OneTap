@@ -8,7 +8,9 @@ import { Avatar } from '@/components/Avatar';
 import { Card } from '@/components/Card';
 import { Chip } from '@/components/Chip';
 import { EmptyState } from '@/components/EmptyState';
+import { AdBanner } from '@/components/AdBanner';
 import { friendlyRpcError } from '@/lib/utils';
+import { useSendLike } from '@/hooks/useSendLike';
 import { colors, spacing, typography } from '@/lib/theme';
 import type { VenueActiveUser } from '@/lib/database.types';
 
@@ -22,12 +24,22 @@ const FILTERS: { key: FilterKey; label: string }[] = [
 ];
 
 export default function SearchScreen() {
-  const { session } = useAuth();
+  const { session, profile } = useAuth();
   const { activeCheckIn } = useCheckIn();
   const [members, setMembers] = useState<VenueActiveUser[]>([]);
   const [query, setQuery] = useState('');
   const [filter, setFilter] = useState<FilterKey>('everyone');
   const [likedIds, setLikedIds] = useState<Set<string>>(new Set());
+  const [watchedIds, setWatchedIds] = useState<Set<string>>(new Set());
+
+  useEffect(() => {
+    if (!session?.user || !profile?.premium) return;
+    supabase
+      .from('watched_users')
+      .select('watched_id')
+      .eq('watcher_id', session.user.id)
+      .then(({ data }) => setWatchedIds(new Set((data ?? []).map((w) => w.watched_id))));
+  }, [session?.user, profile?.premium]);
 
   useEffect(() => {
     if (!activeCheckIn) {
@@ -50,11 +62,25 @@ export default function SearchScreen() {
     });
   }, [members, query, filter]);
 
-  const handleLike = async (toUser: string) => {
-    if (!session?.user) return;
-    const { error } = await supabase.from('likes').insert({ from_user: session.user.id, to_user: toUser });
-    if (error) return Alert.alert('Could not send like', friendlyRpcError(error));
-    setLikedIds((prev) => new Set(prev).add(toUser));
+  const handleLike = useSendLike((toUser) => setLikedIds((prev) => new Set(prev).add(toUser)));
+
+  const toggleWatch = async (watchedId: string) => {
+    if (!session?.user || !profile?.premium) {
+      Alert.alert('Premium feature', 'Upgrade to Premium to get notified when someone checks in.');
+      return;
+    }
+    if (watchedIds.has(watchedId)) {
+      await supabase.from('watched_users').delete().eq('watcher_id', session.user.id).eq('watched_id', watchedId);
+      setWatchedIds((prev) => {
+        const next = new Set(prev);
+        next.delete(watchedId);
+        return next;
+      });
+    } else {
+      const { error } = await supabase.from('watched_users').insert({ watcher_id: session.user.id, watched_id: watchedId });
+      if (error) return Alert.alert('Error', friendlyRpcError(error));
+      setWatchedIds((prev) => new Set(prev).add(watchedId));
+    }
   };
 
   if (!activeCheckIn) {
@@ -102,15 +128,24 @@ export default function SearchScreen() {
                 </Text>
               )}
             </View>
-            <Ionicons
-              name={likedIds.has(item.user_id) ? 'heart' : 'heart-outline'}
-              size={26}
-              color={colors.accent}
-              onPress={() => !likedIds.has(item.user_id) && handleLike(item.user_id)}
-            />
+            <View style={{ flexDirection: 'row', gap: spacing.md, alignItems: 'center' }}>
+              <Ionicons
+                name={watchedIds.has(item.user_id) ? 'notifications' : 'notifications-outline'}
+                size={22}
+                color={watchedIds.has(item.user_id) ? colors.secondaryAccent : colors.secondaryText}
+                onPress={() => toggleWatch(item.user_id)}
+              />
+              <Ionicons
+                name={likedIds.has(item.user_id) ? 'heart' : 'heart-outline'}
+                size={26}
+                color={colors.accent}
+                onPress={() => !likedIds.has(item.user_id) && handleLike(item.user_id)}
+              />
+            </View>
           </Card>
         )}
       />
+      <AdBanner />
     </View>
   );
 }
