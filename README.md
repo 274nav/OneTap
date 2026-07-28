@@ -67,7 +67,7 @@ the app is fully wired to use them, it just needs the actual values:
 
 | What | Where to get it | Goes in |
 |---|---|---|
-| Google Maps API key (iOS + Android) | [Google Cloud Console](https://console.cloud.google.com/) → enable "Maps SDK for iOS" / "Maps SDK for Android" | `app.json` → `ios.config.googleMapsApiKey`, `android.config.googleMaps.apiKey` (or set `IOS_GOOGLE_MAPS_API_KEY` / `ANDROID_GOOGLE_MAPS_API_KEY` as EAS secrets) |
+| Google Maps API key (iOS + Android) | [Google Cloud Console](https://console.cloud.google.com/) → enable "Maps SDK for iOS" / "Maps SDK for Android" | `.env` → `IOS_GOOGLE_MAPS_API_KEY`, `ANDROID_GOOGLE_MAPS_API_KEY` (read by `app.config.js` at build time; set as EAS secrets for CI/EAS builds) |
 | Google Places API key | Same Cloud project → enable "Places API (New)" | `.env` → `EXPO_PUBLIC_GOOGLE_PLACES_API_KEY` |
 | Google OAuth client IDs | Cloud Console → "APIs & Services" → Credentials → OAuth client ID (one **iOS** type, one **Web** type) | `.env` → `EXPO_PUBLIC_GOOGLE_IOS_CLIENT_ID`, `EXPO_PUBLIC_GOOGLE_WEB_CLIENT_ID` |
 | Apple Sign-In | Apple Developer account → enable "Sign in with Apple" capability for the app's bundle ID | Nothing to configure in code — `expo-apple-authentication` picks it up automatically once the capability is enabled in your EAS/Xcode build |
@@ -80,10 +80,15 @@ real map tiles/places, real Google/Apple sign-in, or real push delivery until th
 
 ## Icons & branding
 
-`assets/icon.png`, `splash.png`, `adaptive-icon.png`, `favicon.png`, and `notification-icon.png` are
-currently **1×1 placeholder images** — just enough for the dev server to boot without erroring. Swap
-these for real artwork (1024×1024 for `icon.png`, etc.) before submitting to the App Store / Play
-Store.
+`assets/icon.png`, `adaptive-icon.png`, `splash.png`, and `favicon.png` are the real OneTap mark
+(1024×1024, full-bleed dark artwork — corner-rounding baked into the original file was removed so
+iOS/Android's own icon masking doesn't double up on it). `notification-icon.png` is a plain white
+silhouette of just the circle-and-figure mark cropped from the same artwork, since Android requires
+monochrome notification icons. Splash screen and Android adaptive-icon background color
+(`app.config.js`) were set to match the artwork's dark background (`#1A1A1A`).
+
+If you want a different logo variant later, replace these five files directly (same names/sizes) —
+no code changes needed.
 
 ## Premium billing
 
