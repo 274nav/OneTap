@@ -14,7 +14,7 @@ module.exports = {
     splash: {
       image: './assets/splash.png',
       resizeMode: 'contain',
-      backgroundColor: '#F6F5F2',
+      backgroundColor: '#1A1A1A',
     },
     assetBundlePatterns: ['**/*'],
     ios: {
@@ -37,7 +37,7 @@ module.exports = {
       package: 'com.onetap.app',
       adaptiveIcon: {
         foregroundImage: './assets/adaptive-icon.png',
-        backgroundColor: '#F6F5F2',
+        backgroundColor: '#1A1A1A',
       },
       config: {
         googleMaps: {
