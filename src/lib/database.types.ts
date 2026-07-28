@@ -85,6 +85,8 @@ export interface VenueActiveUser {
   user_id: string;
   name: string;
   age: number;
+  sex: SexType;
+  orientation: OrientationType;
   bio: string;
   photo_url: string | null;
   verified: boolean;
