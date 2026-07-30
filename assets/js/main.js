@@ -84,6 +84,23 @@
     counters.forEach(function (el) { counterIO.observe(el); });
   }
 
+  // FAQ accordion
+  var faqItems = document.querySelectorAll(".faq-item");
+  faqItems.forEach(function (item) {
+    var btn = item.querySelector(".faq-q");
+    btn.addEventListener("click", function () {
+      var isOpen = item.classList.contains("open");
+      faqItems.forEach(function (other) {
+        other.classList.remove("open");
+        other.querySelector(".faq-q").setAttribute("aria-expanded", "false");
+      });
+      if (!isOpen) {
+        item.classList.add("open");
+        btn.setAttribute("aria-expanded", "true");
+      }
+    });
+  });
+
   // Waitlist form (front-end only demo)
   var form = document.getElementById("waitlistForm");
   var note = document.getElementById("formNote");
