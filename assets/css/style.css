@@ -593,11 +593,11 @@ input[type="range"]::-moz-range-track{ background: var(--line-strong); height:6p
 
 .compare-table{
   background: var(--white); border-radius:22px; box-shadow: var(--shadow-md); border:1px solid var(--line);
-  overflow:hidden; max-width:960px; margin:0 auto; overflow-x:auto;
+  overflow:hidden; max-width:680px; margin:0 auto; overflow-x:auto;
 }
 .compare-row{
-  display:grid; grid-template-columns: 1.4fr repeat(4, .85fr); align-items:center;
-  padding:18px 28px; border-bottom:1px solid var(--line); min-width:640px;
+  display:grid; grid-template-columns: 1.5fr 1fr 1fr; align-items:center;
+  padding:18px 28px; border-bottom:1px solid var(--line); min-width:460px;
 }
 .compare-row:last-child{ border-bottom:none; }
 .compare-head{ background: var(--bg-alt); }
@@ -613,7 +613,9 @@ input[type="range"]::-moz-range-track{ background: var(--line-strong); height:6p
 }
 .cell-check{ background: var(--teal-tint); color: var(--teal); }
 .cell-dash{ background:#f1ece2; color: var(--muted-2); font-weight:700; }
-.compare-footnote{ max-width:760px; margin:26px auto 0; font-size:12px; color: var(--muted-2); text-align:center; line-height:1.6; }
+.compare-value{ font-size:13px; font-weight:600; color: var(--ink-soft); line-height:1.35; }
+.compare-value--good{ color: var(--teal); font-weight:700; }
+.compare-footnote{ max-width:640px; margin:26px auto 0; font-size:12px; color: var(--muted-2); text-align:center; line-height:1.6; }
 .compare-close{ text-align:center; margin-top:44px; }
 .compare-close p{ font-family: var(--font-serif); font-size: clamp(19px,2vw,24px); color: var(--ink); margin-bottom:6px; }
 .compare-close p.sub{ color: var(--muted); font-size:15px; font-family: var(--font-sans); }
@@ -801,9 +803,10 @@ body.modal-locked{ overflow:hidden; }
   .badge-row{ gap:14px 20px; }
   .why-grid{ grid-template-columns: 1fr 1fr; }
   .privacy-grid{ grid-template-columns: 1fr; }
-  .compare-row{ grid-template-columns: 1fr 60px 60px 60px 60px; padding:16px 14px; gap:4px; }
+  .compare-row{ grid-template-columns: 1.3fr 85px 85px; padding:16px 14px; gap:4px; min-width:0; }
   .compare-feature{ font-size:12.5px; }
-  .compare-col{ font-size:10.5px; gap:3px; }
+  .compare-col{ font-size:11px; gap:3px; }
+  .compare-value{ font-size:11px; }
   .compare-head .compare-col--originly{ font-size:13px; }
   .contact-cards{ grid-template-columns: 1fr; }
 }
