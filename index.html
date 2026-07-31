@@ -3,15 +3,65 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Originly — Find the people who share yours.</title>
-<meta name="description" content="Originly is the world's first platform that helps you connect through where life began. Same birthplace, same birthday, same story.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='none' stroke='%231d4b3e' stroke-width='7'/%3E%3Cpath d='M35 62 Q35 38 60 38 Q72 38 72 50 Q72 62 60 62 Q52 62 52 54' fill='none' stroke='%231d4b3e' stroke-width='7' stroke-linecap='round'/%3E%3C/svg%3E">
+<title>Originly — Find the People Who Share Your Beginning</title>
+<meta name="description" content="Discover people who share your birthplace, birth hospital, birthday, hometown and story with Originly — a social discovery app built around where life began.">
+<link rel="canonical" href="https://originlyapp.com/">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#faf8f4">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Originly">
+<meta property="og:title" content="Originly — Find the People Who Share Your Beginning">
+<meta property="og:description" content="Discover people who share your birthplace, birth hospital, birthday, hometown and story with Originly.">
+<meta property="og:url" content="https://originlyapp.com/">
+<meta property="og:image" content="https://originlyapp.com/assets/img/og-image.png">
+<meta property="og:locale" content="en_GB">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Originly — Find the People Who Share Your Beginning">
+<meta name="twitter:description" content="Discover people who share your birthplace, birth hospital, birthday, hometown and story with Originly.">
+<meta name="twitter:image" content="https://originlyapp.com/assets/img/og-image.png">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='none' stroke='%23087b7b' stroke-width='7'/%3E%3Cpath d='M35 62 Q35 38 60 38 Q72 38 72 50 Q72 62 60 62 Q52 62 52 54' fill='none' stroke='%23087b7b' stroke-width='7' stroke-linecap='round'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Originly",
+  "url": "https://originlyapp.com/",
+  "email": "info@originlyapp.com",
+  "description": "Originly is a social discovery app that helps people connect through where life began — same birth hospital, birthplace, birthday, hometown and city.",
+  "sameAs": []
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MobileApplication",
+  "name": "Originly",
+  "operatingSystem": "iOS",
+  "applicationCategory": "SocialNetworkingApplication",
+  "description": "Discover people who share your birthplace, birth hospital, birthday, hometown and story.",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "GBP"
+  }
+}
+</script>
 </head>
 <body>
+<a class="skip-link" href="#top">Skip to content</a>
+
+<div class="grain-layer" aria-hidden="true"></div>
+<div class="vignette-layer" aria-hidden="true"></div>
 
 <!-- Shared SVG icon sprite -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -82,33 +132,48 @@
   <symbol id="icon-sparkle" viewBox="0 0 24 24" fill="currentColor">
     <path d="M12 2.5 14 9l6.5 2-6.5 2-2 6.5-2-6.5L3.5 11 10 9Z"/>
   </symbol>
+  <symbol id="icon-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="3" y="5" width="18" height="14" rx="2.4"/><path d="m4 6.5 8 6 8-6"/>
+  </symbol>
+  <symbol id="icon-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/>
+  </symbol>
+  <symbol id="icon-apple" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M16.4 2.6c.1 1.1-.3 2.2-1 3-.7.8-1.9 1.4-3 1.3-.1-1.1.4-2.3 1-3 .8-.9 2-1.5 3-1.3Z"/>
+    <path d="M20.8 17.3c-.5 1.2-.8 1.8-1.5 2.8-1 1.4-2.4 3.2-4.1 3.2-1.5 0-1.9-1-4-1s-2.5 1-4 1c-1.7 0-3-1.6-4-3-2.7-3.9-3-8.4-1.3-10.8 1.2-1.7 3-2.7 4.7-2.7 1.7 0 2.8 1.1 4.2 1.1 1.4 0 2.2-1.1 4.2-1.1 1.5 0 3.1.8 4.2 2.2-3.7 2-3.1 7.2 1.6 8.3Z"/>
+  </symbol>
+  <symbol id="icon-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 21s7-6.5 7-11.8A7 7 0 0 0 5 9.2C5 14.5 12 21 12 21Z"/><circle cx="12" cy="9.2" r="2.4"/>
+  </symbol>
+  <symbol id="icon-sliders" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 6h9M17 6h3M4 12h3M9 12h11M4 18h13M20 18h0"/>
+    <circle cx="15" cy="6" r="2"/><circle cx="7" cy="12" r="2"/><circle cx="17" cy="18" r="2"/>
+  </symbol>
+  <symbol id="icon-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="4.5" y="10.5" width="15" height="10" rx="2.2"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/>
+  </symbol>
+  <symbol id="icon-trash" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M5 7h14M9 7V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2M7 7l1 13h8l1-13"/>
+  </symbol>
+  <symbol id="icon-flag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M5 21V4M5 4.5c2-1 4.5-1 6.5.5s4.5 1.5 6.5.5v9c-2 1-4.5 1-6.5-.5S6.7 12.5 5 13.5"/>
+  </symbol>
+  <symbol id="icon-message" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 5.5h16v11H9l-4 4v-4H4Z"/>
+  </symbol>
 </defs>
 </svg>
 
-<!-- Decorative floating leaves -->
-<div class="leaf-field" aria-hidden="true">
-  <svg class="leaf leaf-1" viewBox="0 0 24 24"><use href="#icon-leaf"/></svg>
-  <svg class="leaf leaf-2" viewBox="0 0 24 24"><use href="#icon-leaf"/></svg>
-  <svg class="leaf leaf-3" viewBox="0 0 24 24"><use href="#icon-leaf"/></svg>
-  <svg class="leaf leaf-4" viewBox="0 0 24 24"><use href="#icon-leaf"/></svg>
-  <svg class="leaf leaf-5" viewBox="0 0 24 24"><use href="#icon-leaf"/></svg>
-  <svg class="leaf leaf-6" viewBox="0 0 24 24"><use href="#icon-leaf"/></svg>
-  <span class="digit digit-1">9</span>
-  <span class="digit digit-2">3</span>
-  <span class="digit digit-3">9</span>
-  <span class="digit digit-4">3</span>
-</div>
-
 <header class="site-header" id="siteHeader">
   <div class="wrap header-inner">
-    <a class="brand" href="#top">
+    <a class="brand" href="#top" aria-label="Originly home">
       <span class="brand-mark" aria-hidden="true">
         <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" stroke-width="6"/><path d="M35 62 Q35 38 60 38 Q72 38 72 50 Q72 62 60 62 Q52 62 52 54" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round"/></svg>
       </span>
       <span class="brand-name">ORIGINLY</span>
     </a>
 
-    <nav class="main-nav" id="mainNav">
+    <nav class="main-nav" id="mainNav" aria-label="Primary">
       <a href="#features">Features</a>
       <a href="#how">How It Works</a>
       <a href="#compare">Compare</a>
@@ -117,8 +182,8 @@
     </nav>
 
     <div class="header-actions">
-      <a href="#waitlist" class="btn btn-primary btn-sm pulse-cta">Get Originly</a>
-      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+      <button type="button" class="btn btn-primary btn-sm pulse-cta" data-open-modal>Get Originly</button>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobilePanel">
         <svg class="icon-open" viewBox="0 0 24 24"><use href="#icon-menu"/></svg>
         <svg class="icon-close" viewBox="0 0 24 24"><use href="#icon-close"/></svg>
       </button>
@@ -126,29 +191,59 @@
   </div>
 </header>
 
+<div class="mobile-panel" id="mobilePanel" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+  <div class="mobile-panel-head">
+    <a class="brand" href="#top">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" stroke-width="6"/><path d="M35 62 Q35 38 60 38 Q72 38 72 50 Q72 62 60 62 Q52 62 52 54" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round"/></svg>
+      </span>
+      <span class="brand-name">ORIGINLY</span>
+    </a>
+    <button class="menu-toggle" id="menuToggleClose" aria-label="Close menu">
+      <svg viewBox="0 0 24 24"><use href="#icon-close"/></svg>
+    </button>
+  </div>
+  <nav aria-label="Mobile primary">
+    <a href="#features">Features</a>
+    <a href="#how">How It Works</a>
+    <a href="#compare">Compare</a>
+    <a href="#premium">Premium</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+  <div class="mobile-panel-cta">
+    <button type="button" class="btn btn-primary btn-block" data-open-modal>Get Originly</button>
+  </div>
+</div>
+
 <main id="top">
   <!-- HERO -->
   <section class="hero">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="digit-field" data-digits="6" aria-hidden="true"></div>
     <div class="wrap hero-inner">
       <div class="hero-copy reveal">
         <p class="eyebrow">Everyone has an origin.</p>
-        <h1 class="display">Find the people<br>who share <em>yours</em>.</h1>
-        <p class="lede">Originly is the world's first platform that helps you connect through where life began.</p>
+        <h1 class="display">Find the people<br>who share <em>yours.</em></h1>
+        <p class="lede">Originly helps you discover people through where life began — from the hospital you were born in to the city you once called home.</p>
 
         <ul class="badge-row">
-          <li><svg class="ic"><use href="#icon-hospital"/></svg>Same Birthplace</li>
+          <li><svg class="ic"><use href="#icon-hospital"/></svg>Same Hospital</li>
           <li><svg class="ic"><use href="#icon-calendar"/></svg>Same Birthday</li>
+          <li><svg class="ic"><use href="#icon-pin"/></svg>Same City</li>
           <li><svg class="ic"><use href="#icon-book"/></svg>Same Story</li>
         </ul>
 
         <div class="cta-row">
-          <a href="#waitlist" class="btn btn-primary">Get Originly</a>
+          <button type="button" class="btn btn-primary" data-open-modal>Get Originly</button>
           <a href="#how" class="btn btn-outline">How It Works</a>
         </div>
       </div>
 
       <div class="hero-art reveal" style="--delay:.15s">
-        <div class="phones">
+        <span class="atmo-digit" aria-hidden="true" style="left:6%; top:6%; font-size:34px; opacity:.045; transform:rotate(-8deg);">3</span>
+        <span class="atmo-digit" aria-hidden="true" style="right:2%; bottom:8%; font-size:26px; opacity:.04; transform:rotate(10deg); filter:blur(.5px);">9</span>
+        <div class="phones" id="heroPhones">
+          <div class="phones-inner-parallax" id="heroPhonesParallax">
           <!-- LEFT PHONE: Discover -->
           <div class="phone phone-left float-a">
             <div class="phone-shell">
@@ -171,7 +266,7 @@
                 </div>
               </div>
               <div class="tabbar">
-                <svg class="ic"><use href="#icon-users"/></svg>
+                <svg class="ic active"><use href="#icon-search"/></svg>
                 <svg class="ic"><use href="#icon-bookmark"/></svg>
                 <svg class="ic"><use href="#icon-heart"/></svg>
               </div>
@@ -196,8 +291,8 @@
                   <span class="heart-burst"><svg class="ic"><use href="#icon-heart"/></svg></span>
                   <span class="avatar avatar-rose lg"><svg class="ic"><use href="#icon-person"/></svg></span>
                 </div>
-                <a class="btn btn-primary btn-block" href="#waitlist">Send a Message</a>
-                <a class="btn btn-outline btn-block" href="#waitlist">Keep Discovering</a>
+                <button type="button" class="btn btn-primary btn-block" data-open-modal>Send a Message</button>
+                <button type="button" class="btn btn-outline btn-block" data-open-modal>Keep Discovering</button>
               </div>
             </div>
           </div>
@@ -233,95 +328,14 @@
                 </div>
               </div>
               <div class="tabbar">
-                <svg class="ic"><use href="#icon-users"/></svg>
+                <svg class="ic"><use href="#icon-search"/></svg>
                 <svg class="ic"><use href="#icon-bookmark"/></svg>
-                <svg class="ic"><use href="#icon-heart"/></svg>
+                <svg class="ic active"><use href="#icon-message"/></svg>
                 <svg class="ic"><use href="#icon-user"/></svg>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- WHY ORIGINLY -->
-  <section class="why" id="features">
-    <div class="wrap why-inner">
-      <div class="why-copy reveal">
-        <p class="eyebrow">Why Originly?</p>
-        <h2 class="h2">Real connections start<br>with real <em>origins</em>.</h2>
-
-        <div class="feature-grid">
-          <div class="feature-card reveal" style="--delay:.05s">
-            <span class="f-icon"><svg class="ic"><use href="#icon-hospital"/></svg></span>
-            <h3>Same Birthplace</h3>
-            <p>Connect with people who were born in the same hospital.</p>
           </div>
-          <div class="feature-card reveal" style="--delay:.12s">
-            <span class="f-icon"><svg class="ic"><use href="#icon-calendar"/></svg></span>
-            <h3>Same Birthday</h3>
-            <p>Find people who celebrate life on the same day.</p>
-          </div>
-          <div class="feature-card reveal" style="--delay:.19s">
-            <span class="f-icon"><svg class="ic"><use href="#icon-book"/></svg></span>
-            <h3>Same Story</h3>
-            <p>Discover others with similar journeys and experiences.</p>
-          </div>
-          <div class="feature-card reveal" style="--delay:.26s">
-            <span class="f-icon"><svg class="ic"><use href="#icon-shield"/></svg></span>
-            <h3>Safe &amp; Private</h3>
-            <p>Your privacy is our priority. Always.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="why-map reveal" style="--delay:.15s">
-        <svg class="world" viewBox="0 0 800 420" aria-hidden="true">
-          <defs>
-            <pattern id="dotgrid" width="11" height="11" patternUnits="userSpaceOnUse">
-              <circle cx="2" cy="2" r="1.6" fill="#c9c2b4"/>
-            </pattern>
-          </defs>
-          <path class="landmass" d="M40 90 C20 130 40 170 90 175 C130 180 150 150 170 155 C210 165 200 210 150 220 C110 228 90 260 120 275 C90 300 60 260 55 220 C10 200 0 140 40 90 Z" fill="url(#dotgrid)"/>
-          <path class="landmass" d="M230 230 C210 270 220 320 260 345 C280 358 300 340 290 310 C310 290 300 250 270 235 C260 228 245 222 230 230 Z" fill="url(#dotgrid)"/>
-          <path class="landmass" d="M330 70 C310 100 330 130 360 140 C340 165 350 200 390 205 C400 230 440 235 450 210 C480 205 470 165 440 155 C455 120 430 90 400 95 C395 70 350 55 330 70 Z" fill="url(#dotgrid)"/>
-          <path class="landmass" d="M470 130 C460 170 490 190 540 185 C580 200 640 190 670 160 C710 150 730 110 700 90 C670 70 620 80 590 100 C550 90 500 100 470 130 Z" fill="url(#dotgrid)"/>
-          <path class="landmass" d="M640 260 C625 280 640 300 665 298 C685 305 705 290 695 270 C700 250 675 240 660 250 C652 250 645 253 640 260 Z" fill="url(#dotgrid)"/>
-        </svg>
-
-        <span class="pin pin-1 pulse-ring" style="--x:14%; --y:22%">
-          <span class="avatar avatar-rose sm"><svg class="ic"><use href="#icon-person"/></svg></span>
-        </span>
-        <span class="pin pin-2 pulse-ring" style="--x:26%; --y:60%">
-          <span class="avatar avatar-amber sm"><svg class="ic"><use href="#icon-person"/></svg></span>
-        </span>
-        <span class="pin pin-3 pulse-ring" style="--x:56%; --y:52%">
-          <span class="avatar avatar-sky sm"><svg class="ic"><use href="#icon-person"/></svg></span>
-        </span>
-        <span class="pin pin-4 pulse-ring" style="--x:83%; --y:33%">
-          <span class="avatar avatar-violet sm"><svg class="ic"><use href="#icon-person"/></svg></span>
-        </span>
-      </div>
-    </div>
-
-    <div class="wrap">
-      <div class="stat-bar reveal">
-        <div class="stat">
-          <svg class="ic"><use href="#icon-users"/></svg>
-          <div><strong class="counter" data-target="50" data-suffix="K+">0</strong><span>People on Waitlist</span></div>
-        </div>
-        <div class="stat">
-          <svg class="ic"><use href="#icon-globe"/></svg>
-          <div><strong class="counter" data-target="120" data-suffix="+">0</strong><span>Countries</span></div>
-        </div>
-        <div class="stat">
-          <svg class="ic"><use href="#icon-heart"/></svg>
-          <div><strong class="counter" data-target="1" data-suffix="M+">0</strong><span>Possible Connections</span></div>
-        </div>
-        <div class="stat">
-          <svg class="ic"><use href="#icon-shield"/></svg>
-          <div><strong class="counter" data-target="100" data-suffix="%">0</strong><span>Privacy Focused</span></div>
         </div>
       </div>
     </div>
@@ -331,24 +345,383 @@
   <section class="how" id="how">
     <div class="wrap">
       <p class="eyebrow center">How it works</p>
-      <h2 class="h2 center">Three steps to your <em>origin story</em>.</h2>
+      <h2 class="h2 center">Every story starts <em>somewhere.</em></h2>
+      <p class="lede center">Three simple steps between where your life began and who you meet next.</p>
       <div class="steps">
         <div class="step reveal" style="--delay:.05s">
           <span class="step-no">01</span>
-          <h3>Share your origin</h3>
-          <p>Tell us your birthplace, birthday, and a bit of your story.</p>
+          <h3>Add your origin</h3>
+          <p>Tell Originly where your story began — your birthplace, birth hospital and birthday.</p>
         </div>
         <div class="step reveal" style="--delay:.15s">
           <span class="step-no">02</span>
-          <h3>We find your matches</h3>
-          <p>Originly surfaces people who share real, verifiable origins with you.</p>
+          <h3>Discover</h3>
+          <p>Find people connected through birthplace, hospital, birthday, hometown and current location.</p>
         </div>
         <div class="step reveal" style="--delay:.25s">
           <span class="step-no">03</span>
-          <h3>Start the conversation</h3>
-          <p>Message the people who share where your life began.</p>
+          <h3>Connect</h3>
+          <p>Like, match and start a conversation around something you genuinely share.</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- SHARED BIRTHDAY -->
+  <section class="birthday">
+    <div class="digit-field" data-digits="7" aria-hidden="true"></div>
+    <div class="wrap birthday-inner">
+      <p class="eyebrow">A closer kind of coincidence</p>
+      <h2 class="birthday-headline">Same birthday.<br>Different lives.<br><span class="accent">One unexpected connection.</span></h2>
+      <p class="birthday-copy">Somewhere out there, someone entered the world on the exact same day you did. Originly lets you discover people who share your date of birth — a small, specific detail that can start a real conversation.</p>
+      <div class="birthday-visual" aria-hidden="true">
+        <div class="birthday-date"><strong>You</strong><span>12 MAR 1998</span></div>
+        <span class="birthday-link"><svg class="ic"><use href="#icon-sparkle"/></svg></span>
+        <div class="birthday-date"><strong>Them</strong><span>12 MAR 1998</span></div>
+      </div>
+      <button type="button" class="btn btn-outline" data-open-modal style="border-color:rgba(255,255,255,.4); color:#fff;">Find your birthday match</button>
+    </div>
+  </section>
+
+  <!-- WHY ORIGINLY -->
+  <section class="why" id="features">
+    <div class="wrap">
+      <p class="eyebrow">Why Originly?</p>
+      <h2 class="h2 center">Real connections start<br>with real <em>origins.</em></h2>
+
+      <div class="why-grid">
+        <div class="why-card reveal" style="--delay:.03s">
+          <span class="why-icon"><svg class="ic"><use href="#icon-hospital"/></svg></span>
+          <h3>Same Hospital</h3>
+          <p>Discover people whose story began in the same hospital as yours.</p>
+        </div>
+        <div class="why-card reveal" style="--delay:.08s">
+          <span class="why-icon"><svg class="ic"><use href="#icon-calendar"/></svg></span>
+          <h3>Same Birthday</h3>
+          <p>Find people who entered the world on the same day as you.</p>
+        </div>
+        <div class="why-card reveal" style="--delay:.13s">
+          <span class="why-icon"><svg class="ic"><use href="#icon-pin"/></svg></span>
+          <h3>Same City</h3>
+          <p>Meet people connected to the places that shaped you.</p>
+        </div>
+        <div class="why-card reveal" style="--delay:.18s">
+          <span class="why-icon"><svg class="ic"><use href="#icon-book"/></svg></span>
+          <h3>Same Story</h3>
+          <p>Start conversations with something meaningful already in common.</p>
+        </div>
+        <div class="why-card reveal" style="--delay:.23s">
+          <span class="why-icon"><svg class="ic"><use href="#icon-shield"/></svg></span>
+          <h3>Private By Design</h3>
+          <p>You decide what you share and how people discover you.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERACTIVE SEARCH DEMO -->
+  <section class="demo">
+    <div class="wrap">
+      <p class="eyebrow center">Try it</p>
+      <h2 class="h2 center">See how discovery <em>feels.</em></h2>
+      <p class="lede center">A short, tasteful preview of Originly's search — no sign-up required.</p>
+
+      <form class="demo-panel reveal" id="demoForm">
+        <div class="demo-controls">
+          <div class="demo-field">
+            <label for="demoCity">Born in city</label>
+            <select id="demoCity" name="city">
+              <option>London</option>
+              <option>Manchester</option>
+              <option>Glasgow</option>
+              <option>Dublin</option>
+              <option>Toronto</option>
+            </select>
+          </div>
+          <div class="demo-field">
+            <label for="demoHospital">Hospital</label>
+            <select id="demoHospital" name="hospital">
+              <option>Any hospital</option>
+              <option>Queen Charlotte's Hospital</option>
+              <option>St Mary's Hospital</option>
+              <option>Rotunda Hospital</option>
+              <option>Mount Sinai Hospital</option>
+            </select>
+          </div>
+          <div class="demo-field">
+            <label for="demoBirthday">Birthday</label>
+            <input type="date" id="demoBirthday" name="birthday" value="1998-03-12">
+          </div>
+          <div class="demo-field">
+            <label for="demoLives">Currently lives in</label>
+            <select id="demoLives" name="lives">
+              <option>Anywhere</option>
+              <option>Same city as me</option>
+              <option>Within my country</option>
+            </select>
+          </div>
+          <div class="demo-field">
+            <label for="demoDistance">Distance: <output id="demoDistanceOut">25 mi</output></label>
+            <div class="demo-range">
+              <input type="range" id="demoDistance" name="distance" min="1" max="100" value="25">
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary demo-submit">
+            <svg class="ic sm"><use href="#icon-search"/></svg> Search example matches
+          </button>
+          <p class="demo-disclaimer">This is a demonstration using example profiles, not real user data.</p>
+        </div>
+        <div class="demo-results" aria-live="polite">
+          <p class="demo-results-label"><span class="dot"></span> Example results</p>
+          <div id="demoResultsList">
+            <p class="demo-empty">Adjust the filters and search to preview example matches.</p>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- APP SHOWCASE -->
+  <section class="showcase">
+    <div class="wrap">
+      <div class="showcase-head">
+        <p class="eyebrow">In your hands</p>
+        <h2 class="h2">Originly, in your <em>hands.</em></h2>
+        <p class="lede">A closer look at how discovery, matching and conversation feel inside the app.</p>
+      </div>
+
+      <div class="showcase-grid">
+        <div class="showcase-sticky">
+          <div class="phone">
+            <div class="phone-shell">
+              <div class="notch"></div>
+              <div class="statusbar"><span>9:41</span><span class="sb-icons"><i></i><i></i><i class="batt"></i></span></div>
+
+              <div class="showcase-screen active" data-screen="0">
+                <div class="screen">
+                  <h4 class="scr-title">Search</h4>
+                  <p class="scr-sub">Filter by what matters to you.</p>
+                  <div class="search-pill"><svg class="ic sm"><use href="#icon-sliders"/></svg>Hospital · Birthday · City</div>
+                  <p class="scr-label">Active filters</p>
+                  <div class="match-cards">
+                    <div class="match-card"><span class="avatar avatar-sky"><svg class="ic"><use href="#icon-hospital"/></svg></span><strong>Hospital</strong><small>Queen Charlotte's</small></div>
+                    <div class="match-card"><span class="avatar avatar-amber"><svg class="ic"><use href="#icon-calendar"/></svg></span><strong>Birthday</strong><small>12 March</small></div>
+                  </div>
+                </div>
+                <div class="tabbar"><svg class="ic active"><use href="#icon-search"/></svg><svg class="ic"><use href="#icon-bookmark"/></svg><svg class="ic"><use href="#icon-heart"/></svg><svg class="ic"><use href="#icon-user"/></svg></div>
+              </div>
+
+              <div class="showcase-screen" data-screen="1">
+                <div class="screen">
+                  <h4 class="scr-title">Discover</h4>
+                  <p class="scr-sub">People connected to your origin.</p>
+                  <div class="match-cards">
+                    <div class="match-card"><span class="avatar avatar-rose"><svg class="ic"><use href="#icon-person"/></svg></span><strong>Maya, 27</strong><small>Same city</small></div>
+                    <div class="match-card"><span class="avatar avatar-violet"><svg class="ic"><use href="#icon-person"/></svg></span><strong>Noah, 26</strong><small>Same hospital</small></div>
+                  </div>
+                  <p class="scr-label" style="margin-top:14px;">More nearby</p>
+                  <div class="match-cards">
+                    <div class="match-card"><span class="avatar avatar-sky"><svg class="ic"><use href="#icon-person"/></svg></span><strong>Isla, 25</strong><small>Same birthday</small></div>
+                    <div class="match-card"><span class="avatar avatar-amber"><svg class="ic"><use href="#icon-person"/></svg></span><strong>Leo, 28</strong><small>Same hometown</small></div>
+                  </div>
+                </div>
+                <div class="tabbar"><svg class="ic"><use href="#icon-search"/></svg><svg class="ic active"><use href="#icon-bookmark"/></svg><svg class="ic"><use href="#icon-heart"/></svg><svg class="ic"><use href="#icon-user"/></svg></div>
+              </div>
+
+              <div class="showcase-screen" data-screen="2">
+                <div class="screen">
+                  <h4 class="scr-title">Likes</h4>
+                  <p class="scr-sub">People who liked your profile.</p>
+                  <div class="match-cards">
+                    <div class="match-card"><span class="avatar avatar-amber"><svg class="ic"><use href="#icon-heart"/></svg></span><strong>Someone liked you</strong><small>Same hospital</small></div>
+                    <div class="match-card"><span class="avatar avatar-rose"><svg class="ic"><use href="#icon-heart"/></svg></span><strong>Someone liked you</strong><small>Same birthday</small></div>
+                  </div>
+                </div>
+                <div class="tabbar"><svg class="ic"><use href="#icon-search"/></svg><svg class="ic"><use href="#icon-bookmark"/></svg><svg class="ic active"><use href="#icon-heart"/></svg><svg class="ic"><use href="#icon-user"/></svg></div>
+              </div>
+
+              <div class="showcase-screen" data-screen="3">
+                <div class="app-header"><svg class="ic sm"><use href="#icon-back"/></svg><span class="app-header-name"><svg class="ic tiny"><use href="#icon-leaf"/></svg> Originly</span><svg class="ic sm"><use href="#icon-smile"/></svg></div>
+                <div class="screen center-screen">
+                  <h4 class="scr-title center-title">It's a Match!</h4>
+                  <p class="scr-sub center-sub">You and Maya were both born<br>at <strong>Queen Charlotte's Hospital</strong></p>
+                  <div class="match-duo">
+                    <span class="avatar avatar-sky lg"><svg class="ic"><use href="#icon-person"/></svg></span>
+                    <span class="heart-burst"><svg class="ic"><use href="#icon-heart"/></svg></span>
+                    <span class="avatar avatar-rose lg"><svg class="ic"><use href="#icon-person"/></svg></span>
+                  </div>
+                </div>
+                <div class="tabbar"><svg class="ic"><use href="#icon-search"/></svg><svg class="ic"><use href="#icon-bookmark"/></svg><svg class="ic active"><use href="#icon-heart"/></svg><svg class="ic"><use href="#icon-user"/></svg></div>
+              </div>
+
+              <div class="showcase-screen" data-screen="4">
+                <div class="screen">
+                  <h4 class="scr-title">Messages</h4>
+                  <div class="msg-list">
+                    <div class="msg-row"><span class="avatar avatar-rose sm"><svg class="ic"><use href="#icon-person"/></svg></span><span class="msg-body"><strong>Maya</strong><small>Small world, right?</small></span><span class="msg-time">2m</span></div>
+                    <div class="msg-row"><span class="avatar avatar-violet sm"><svg class="ic"><use href="#icon-person"/></svg></span><span class="msg-body"><strong>Noah</strong><small>Same hospital too!</small></span><span class="msg-time">1h</span></div>
+                  </div>
+                </div>
+                <div class="tabbar"><svg class="ic"><use href="#icon-search"/></svg><svg class="ic"><use href="#icon-bookmark"/></svg><svg class="ic"><use href="#icon-heart"/></svg><svg class="ic active"><use href="#icon-message"/></svg></div>
+              </div>
+
+              <div class="showcase-screen" data-screen="5">
+                <div class="screen center-screen">
+                  <span class="avatar avatar-sky lg" style="margin:0 auto 14px;"><svg class="ic"><use href="#icon-person"/></svg></span>
+                  <h4 class="scr-title center-title">Your Profile</h4>
+                  <p class="scr-sub center-sub">Born in <strong>London</strong><br>Hospital: <strong>Queen Charlotte's</strong><br>Birthday: <strong>12 March</strong></p>
+                  <button type="button" class="btn btn-outline btn-block" data-open-modal>Edit Origin</button>
+                </div>
+                <div class="tabbar"><svg class="ic"><use href="#icon-search"/></svg><svg class="ic"><use href="#icon-bookmark"/></svg><svg class="ic"><use href="#icon-heart"/></svg><svg class="ic active"><use href="#icon-user"/></svg></div>
+              </div>
+
+              <div class="showcase-screen" data-screen="6">
+                <div class="screen center-screen">
+                  <span class="avatar avatar-amber lg" style="margin:0 auto 14px;"><svg class="ic"><use href="#icon-sparkle"/></svg></span>
+                  <h4 class="scr-title center-title">Originly Premium</h4>
+                  <p class="scr-sub center-sub">Unlimited searches, see who liked you, and advanced filters — <strong>£6.99/mo</strong></p>
+                  <button type="button" class="btn btn-primary btn-block" data-open-modal>Get Premium</button>
+                </div>
+                <div class="tabbar"><svg class="ic"><use href="#icon-search"/></svg><svg class="ic"><use href="#icon-bookmark"/></svg><svg class="ic"><use href="#icon-heart"/></svg><svg class="ic"><use href="#icon-user"/></svg></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="showcase-copy-list" id="showcaseCopyList">
+          <div class="showcase-copy active" data-copy="0">
+            <p class="tag">Search</p>
+            <h3>Search with intention</h3>
+            <p>Filter by hospital, birthday, hometown or distance — refine your discovery until it feels personal.</p>
+          </div>
+          <div class="showcase-copy" data-copy="1">
+            <p class="tag">Discover</p>
+            <h3>See who shares your beginning</h3>
+            <p>Browse people connected through birthplace, birthday and city, all in one calm feed.</p>
+          </div>
+          <div class="showcase-copy" data-copy="2">
+            <p class="tag">Likes</p>
+            <h3>Know who's interested</h3>
+            <p>See who liked your profile before you decide to say hello.</p>
+          </div>
+          <div class="showcase-copy" data-copy="3">
+            <p class="tag">Matches</p>
+            <h3>Every match has a reason</h3>
+            <p>Each match arrives with the origin story you already share — never a blank slate.</p>
+          </div>
+          <div class="showcase-copy" data-copy="4">
+            <p class="tag">Chat</p>
+            <h3>Conversations with context</h3>
+            <p>Skip the small talk — you already know exactly where to start.</p>
+          </div>
+          <div class="showcase-copy" data-copy="5">
+            <p class="tag">Profile</p>
+            <h3>Your story, your way</h3>
+            <p>Choose what you share — birthplace, hospital, birthday, hometown — as much or as little as you like.</p>
+          </div>
+          <div class="showcase-copy" data-copy="6">
+            <p class="tag">Premium</p>
+            <h3>Go further with Premium</h3>
+            <p>Unlock advanced filters, see who liked you, and stay ahead in search.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile fallback -->
+      <div class="showcase-mobile-list" aria-hidden="false">
+        <div class="showcase-mobile-item">
+          <div class="phone"><div class="phone-shell"><div class="notch"></div>
+            <div class="statusbar"><span>9:41</span><span class="sb-icons"><i></i><i></i><i class="batt"></i></span></div>
+            <div class="showcase-screen active"><div class="screen"><h4 class="scr-title">Search</h4><p class="scr-sub">Filter by what matters to you.</p><div class="search-pill"><svg class="ic sm"><use href="#icon-sliders"/></svg>Hospital · Birthday · City</div></div><div class="tabbar"><svg class="ic active"><use href="#icon-search"/></svg><svg class="ic"><use href="#icon-bookmark"/></svg><svg class="ic"><use href="#icon-heart"/></svg><svg class="ic"><use href="#icon-user"/></svg></div></div>
+          </div></div>
+          <h3>Search with intention</h3><p>Filter by hospital, birthday, hometown or distance.</p>
+        </div>
+        <div class="showcase-mobile-item">
+          <div class="phone"><div class="phone-shell"><div class="notch"></div>
+            <div class="statusbar"><span>9:41</span><span class="sb-icons"><i></i><i></i><i class="batt"></i></span></div>
+            <div class="showcase-screen active"><div class="screen"><h4 class="scr-title">Discover</h4><p class="scr-sub">People connected to your origin.</p><div class="match-cards"><div class="match-card"><span class="avatar avatar-rose"><svg class="ic"><use href="#icon-person"/></svg></span><strong>Maya, 27</strong><small>Same city</small></div></div></div><div class="tabbar"><svg class="ic"><use href="#icon-search"/></svg><svg class="ic active"><use href="#icon-bookmark"/></svg><svg class="ic"><use href="#icon-heart"/></svg><svg class="ic"><use href="#icon-user"/></svg></div></div>
+          </div></div>
+          <h3>See who shares your beginning</h3><p>Browse people connected through birthplace, birthday and city.</p>
+        </div>
+        <div class="showcase-mobile-item">
+          <div class="phone"><div class="phone-shell"><div class="notch"></div>
+            <div class="statusbar"><span>9:41</span><span class="sb-icons"><i></i><i></i><i class="batt"></i></span></div>
+            <div class="showcase-screen active"><div class="app-header"><svg class="ic sm"><use href="#icon-back"/></svg><span class="app-header-name"><svg class="ic tiny"><use href="#icon-leaf"/></svg> Originly</span><svg class="ic sm"><use href="#icon-smile"/></svg></div><div class="screen center-screen"><h4 class="scr-title center-title">It's a Match!</h4><div class="match-duo"><span class="avatar avatar-sky lg"><svg class="ic"><use href="#icon-person"/></svg></span><span class="heart-burst"><svg class="ic"><use href="#icon-heart"/></svg></span><span class="avatar avatar-rose lg"><svg class="ic"><use href="#icon-person"/></svg></span></div></div><div class="tabbar"><svg class="ic"><use href="#icon-search"/></svg><svg class="ic"><use href="#icon-bookmark"/></svg><svg class="ic active"><use href="#icon-heart"/></svg><svg class="ic"><use href="#icon-user"/></svg></div></div>
+          </div></div>
+          <h3>Every match has a reason</h3><p>Each match arrives with the origin story you already share.</p>
+        </div>
+        <div class="showcase-mobile-item">
+          <div class="phone"><div class="phone-shell"><div class="notch"></div>
+            <div class="statusbar"><span>9:41</span><span class="sb-icons"><i></i><i></i><i class="batt"></i></span></div>
+            <div class="showcase-screen active"><div class="screen"><h4 class="scr-title">Messages</h4><div class="msg-list"><div class="msg-row"><span class="avatar avatar-rose sm"><svg class="ic"><use href="#icon-person"/></svg></span><span class="msg-body"><strong>Maya</strong><small>Small world, right?</small></span><span class="msg-time">2m</span></div></div></div><div class="tabbar"><svg class="ic"><use href="#icon-search"/></svg><svg class="ic"><use href="#icon-bookmark"/></svg><svg class="ic"><use href="#icon-heart"/></svg><svg class="ic active"><use href="#icon-message"/></svg></div></div>
+          </div></div>
+          <h3>Conversations with context</h3><p>Skip the small talk — you already know where to start.</p>
+        </div>
+        <div class="showcase-mobile-item">
+          <div class="phone"><div class="phone-shell"><div class="notch"></div>
+            <div class="statusbar"><span>9:41</span><span class="sb-icons"><i></i><i></i><i class="batt"></i></span></div>
+            <div class="showcase-screen active"><div class="screen center-screen"><span class="avatar avatar-sky lg" style="margin:0 auto 14px;"><svg class="ic"><use href="#icon-person"/></svg></span><h4 class="scr-title center-title">Your Profile</h4><p class="scr-sub center-sub">Born in <strong>London</strong></p></div><div class="tabbar"><svg class="ic"><use href="#icon-search"/></svg><svg class="ic"><use href="#icon-bookmark"/></svg><svg class="ic"><use href="#icon-heart"/></svg><svg class="ic active"><use href="#icon-user"/></svg></div></div>
+          </div></div>
+          <h3>Your story, your way</h3><p>Choose exactly what you share and with whom.</p>
+        </div>
+        <div class="showcase-mobile-item">
+          <div class="phone"><div class="phone-shell"><div class="notch"></div>
+            <div class="statusbar"><span>9:41</span><span class="sb-icons"><i></i><i></i><i class="batt"></i></span></div>
+            <div class="showcase-screen active"><div class="screen center-screen"><span class="avatar avatar-amber lg" style="margin:0 auto 14px;"><svg class="ic"><use href="#icon-sparkle"/></svg></span><h4 class="scr-title center-title">Originly Premium</h4><p class="scr-sub center-sub"><strong>£6.99/mo</strong></p></div><div class="tabbar"><svg class="ic"><use href="#icon-search"/></svg><svg class="ic"><use href="#icon-bookmark"/></svg><svg class="ic"><use href="#icon-heart"/></svg><svg class="ic"><use href="#icon-user"/></svg></div></div>
+          </div></div>
+          <h3>Go further with Premium</h3><p>Advanced filters and priority placement in search.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONNECTION -->
+  <section class="connection">
+    <div class="wrap connection-text reveal">
+      <p>You may have been born in the same hospital.</p>
+      <p>On the same day.</p>
+      <p>Walked the same streets.</p>
+      <p class="hi">Called the same city home.</p>
+      <p class="hi">And never known the other person existed.</p>
+      <p class="connection-until">Until Originly.</p>
+    </div>
+  </section>
+
+  <!-- ORIGIN MAP -->
+  <section class="originmap">
+    <div class="wrap">
+      <p class="eyebrow center">A global idea</p>
+      <h2 class="h2 center">Everyone's story starts <em>somewhere.</em></h2>
+      <p class="lede center">Origins span every city, hospital and hometown — Originly is built to connect them, wherever they are.</p>
+
+      <div class="map-panel reveal">
+        <div class="digit-field" data-digits="4" aria-hidden="true"></div>
+        <svg class="world" viewBox="0 0 800 420" aria-hidden="true">
+          <defs>
+            <pattern id="dotgrid" width="11" height="11" patternUnits="userSpaceOnUse">
+              <circle cx="2" cy="2" r="1.6" fill="#d7cdb4"/>
+            </pattern>
+          </defs>
+          <path class="landmass" d="M40 90 C20 130 40 170 90 175 C130 180 150 150 170 155 C210 165 200 210 150 220 C110 228 90 260 120 275 C90 300 60 260 55 220 C10 200 0 140 40 90 Z"/>
+          <path class="landmass" d="M230 230 C210 270 220 320 260 345 C280 358 300 340 290 310 C310 290 300 250 270 235 C260 228 245 222 230 230 Z"/>
+          <path class="landmass" d="M330 70 C310 100 330 130 360 140 C340 165 350 200 390 205 C400 230 440 235 450 210 C480 205 470 165 440 155 C455 120 430 90 400 95 C395 70 350 55 330 70 Z"/>
+          <path class="landmass" d="M470 130 C460 170 490 190 540 185 C580 200 640 190 670 160 C710 150 730 110 700 90 C670 70 620 80 590 100 C550 90 500 100 470 130 Z"/>
+          <path class="landmass" d="M640 260 C625 280 640 300 665 298 C685 305 705 290 695 270 C700 250 675 240 660 250 C652 250 645 253 640 260 Z"/>
+          <path class="map-path" d="M112 98 C 250 40, 420 260, 512 116"/>
+          <path class="map-path" d="M512 116 C 580 200, 640 250, 668 275"/>
+          <path class="map-path" d="M112 98 C 160 220, 220 300, 260 288"/>
+          <text x="47" y="272" font-family="Playfair Display, serif" font-size="30" fill="currentColor" opacity="0.045">3</text>
+          <text x="600" y="60" font-family="Playfair Display, serif" font-size="24" fill="currentColor" opacity="0.04">6</text>
+          <text x="330" y="330" font-family="Playfair Display, serif" font-size="26" fill="currentColor" opacity="0.035">9</text>
+        </svg>
+
+        <span class="pin pin-1" style="--x:14%; --y:23%" tabindex="0"><span class="pin-dot"></span><span class="pin-label">London</span></span>
+        <span class="pin pin-2" style="--x:29%; --y:68%" tabindex="0"><span class="pin-dot"></span><span class="pin-label">Toronto</span></span>
+        <span class="pin pin-3" style="--x:56%; --y:37%" tabindex="0"><span class="pin-dot"></span><span class="pin-label">Lagos</span></span>
+        <span class="pin pin-4" style="--x:64%; --y:44%" tabindex="0"><span class="pin-dot"></span><span class="pin-label">Mumbai</span></span>
+        <span class="pin pin-5" style="--x:84%; --y:66%" tabindex="0"><span class="pin-dot"></span><span class="pin-label">Sydney</span></span>
+      </div>
+      <p class="map-note">Illustrative only — cities shown are examples, not live user data.</p>
     </div>
   </section>
 
@@ -356,44 +729,77 @@
   <section class="compare" id="compare">
     <div class="wrap">
       <p class="eyebrow center">Compare</p>
-      <h2 class="h2 center">Not another <em>swiping app</em>.</h2>
-      <p class="lede center">Most apps match you on looks. Originly starts with something real — where your story began.</p>
+      <h2 class="h2 center">Built for a different kind<br>of <em>connection.</em></h2>
+      <p class="lede center">The strongest connections don't always start with a swipe.</p>
+      <p class="compare-kicker">Sometimes they start with where life began.</p>
 
       <div class="compare-table reveal">
         <div class="compare-row compare-head">
           <div class="compare-feature"></div>
-          <div class="compare-col">Typical Dating Apps</div>
           <div class="compare-col compare-col--originly">
             <span class="brand-mark sm" aria-hidden="true"><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" stroke-width="6"/><path d="M35 62 Q35 38 60 38 Q72 38 72 50 Q72 62 60 62 Q52 62 52 54" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round"/></svg></span>
             Originly
           </div>
+          <div class="compare-col">Tinder</div>
+          <div class="compare-col">Hinge</div>
+          <div class="compare-col">Bumble</div>
         </div>
 
         <div class="compare-row reveal" style="--delay:.03s">
-          <div class="compare-feature">Matches by shared origin</div>
-          <div class="compare-col"><span class="cell-x"><svg class="ic sm"><use href="#icon-x"/></svg></span></div>
+          <div class="compare-feature">Shared birthplace discovery</div>
           <div class="compare-col compare-col--originly"><span class="cell-check"><svg class="ic sm"><use href="#icon-check"/></svg></span></div>
+          <div class="compare-col"><span class="cell-dash">—</span></div>
+          <div class="compare-col"><span class="cell-dash">—</span></div>
+          <div class="compare-col"><span class="cell-dash">—</span></div>
         </div>
-        <div class="compare-row reveal" style="--delay:.08s">
-          <div class="compare-feature">Verified birthplace &amp; birthday</div>
-          <div class="compare-col"><span class="cell-x"><svg class="ic sm"><use href="#icon-x"/></svg></span></div>
+        <div class="compare-row reveal" style="--delay:.06s">
+          <div class="compare-feature">Birth hospital discovery</div>
           <div class="compare-col compare-col--originly"><span class="cell-check"><svg class="ic sm"><use href="#icon-check"/></svg></span></div>
+          <div class="compare-col"><span class="cell-dash">—</span></div>
+          <div class="compare-col"><span class="cell-dash">—</span></div>
+          <div class="compare-col"><span class="cell-dash">—</span></div>
         </div>
-        <div class="compare-row reveal" style="--delay:.13s">
-          <div class="compare-feature">Conversations start with a real story</div>
-          <div class="compare-col"><span class="cell-x"><svg class="ic sm"><use href="#icon-x"/></svg></span></div>
+        <div class="compare-row reveal" style="--delay:.09s">
+          <div class="compare-feature">Same birthday discovery</div>
           <div class="compare-col compare-col--originly"><span class="cell-check"><svg class="ic sm"><use href="#icon-check"/></svg></span></div>
+          <div class="compare-col"><span class="cell-dash">—</span></div>
+          <div class="compare-col"><span class="cell-dash">—</span></div>
+          <div class="compare-col"><span class="cell-dash">—</span></div>
+        </div>
+        <div class="compare-row reveal" style="--delay:.12s">
+          <div class="compare-feature">Origin-based search</div>
+          <div class="compare-col compare-col--originly"><span class="cell-check"><svg class="ic sm"><use href="#icon-check"/></svg></span></div>
+          <div class="compare-col"><span class="cell-dash">—</span></div>
+          <div class="compare-col"><span class="cell-dash">—</span></div>
+          <div class="compare-col"><span class="cell-dash">—</span></div>
+        </div>
+        <div class="compare-row reveal" style="--delay:.15s">
+          <div class="compare-feature">Designed around shared beginnings</div>
+          <div class="compare-col compare-col--originly"><span class="cell-check"><svg class="ic sm"><use href="#icon-check"/></svg></span></div>
+          <div class="compare-col"><span class="cell-dash">—</span></div>
+          <div class="compare-col"><span class="cell-dash">—</span></div>
+          <div class="compare-col"><span class="cell-dash">—</span></div>
         </div>
         <div class="compare-row reveal" style="--delay:.18s">
-          <div class="compare-feature">Privacy-first, data never sold</div>
-          <div class="compare-col"><span class="cell-x"><svg class="ic sm"><use href="#icon-x"/></svg></span></div>
+          <div class="compare-feature">Free option</div>
           <div class="compare-col compare-col--originly"><span class="cell-check"><svg class="ic sm"><use href="#icon-check"/></svg></span></div>
+          <div class="compare-col"><span class="cell-check"><svg class="ic sm"><use href="#icon-check"/></svg></span></div>
+          <div class="compare-col"><span class="cell-check"><svg class="ic sm"><use href="#icon-check"/></svg></span></div>
+          <div class="compare-col"><span class="cell-check"><svg class="ic sm"><use href="#icon-check"/></svg></span></div>
         </div>
-        <div class="compare-row reveal" style="--delay:.23s">
-          <div class="compare-feature">Endless, low-intent swiping</div>
-          <div class="compare-col"><span class="cell-check muted"><svg class="ic sm"><use href="#icon-check"/></svg></span></div>
-          <div class="compare-col compare-col--originly"><span class="cell-x good"><svg class="ic sm"><use href="#icon-x"/></svg></span></div>
+        <div class="compare-row reveal" style="--delay:.21s">
+          <div class="compare-feature">Optional premium</div>
+          <div class="compare-col compare-col--originly"><span class="cell-check"><svg class="ic sm"><use href="#icon-check"/></svg></span></div>
+          <div class="compare-col"><span class="cell-check"><svg class="ic sm"><use href="#icon-check"/></svg></span></div>
+          <div class="compare-col"><span class="cell-check"><svg class="ic sm"><use href="#icon-check"/></svg></span></div>
+          <div class="compare-col"><span class="cell-check"><svg class="ic sm"><use href="#icon-check"/></svg></span></div>
         </div>
+      </div>
+      <p class="compare-footnote">This comparison reflects Originly's product focus and publicly known freemium structures. It is not an exhaustive or independently verified audit of other apps' features or pricing.</p>
+
+      <div class="compare-close">
+        <p>The strongest connections don't always start with a swipe.</p>
+        <p class="sub">Sometimes they start with where life began.</p>
       </div>
     </div>
   </section>
@@ -402,36 +808,62 @@
   <section class="premium" id="premium">
     <div class="wrap">
       <p class="eyebrow center">Premium</p>
-      <h2 class="h2 center">Unlock the full <em>origin story</em>.</h2>
-      <p class="lede center">Start for free. Go further with Premium when you're ready.</p>
+      <h2 class="h2 center">More Originly. <em>Still simple.</em></h2>
+      <p class="lede center">Premium without the complicated tiers.</p>
 
-      <div class="pricing-grid">
-        <div class="price-card reveal" style="--delay:.05s">
-          <h3>Free</h3>
-          <p class="price"><span>$0</span>/month</p>
-          <p class="price-sub">Everything you need to start finding your origin matches.</p>
-          <ul class="price-list">
-            <li><svg class="ic sm"><use href="#icon-check"/></svg>Match by birthplace, birthday &amp; story</li>
-            <li><svg class="ic sm"><use href="#icon-check"/></svg>5 new discoveries a day</li>
-            <li><svg class="ic sm"><use href="#icon-check"/></svg>Unlimited messaging with matches</li>
-          </ul>
-          <a href="#waitlist" class="btn btn-outline btn-block">Get Started</a>
-        </div>
-
-        <div class="price-card price-card--highlight reveal" style="--delay:.15s">
-          <span class="price-badge"><svg class="ic sm"><use href="#icon-sparkle"/></svg>Most Popular</span>
+      <div class="pricing-wrap">
+        <div class="price-card reveal">
+          <span class="price-badge"><svg class="ic sm"><use href="#icon-sparkle"/></svg>Originly Premium</span>
           <h3>Premium</h3>
-          <p class="price"><span>$9</span>/month</p>
-          <p class="price-sub">For people serious about finding their people.</p>
+          <p class="price-tagline">One plan. Everything unlocked.</p>
+          <p class="price"><span class="amount">£6.99</span><span class="period">/month</span></p>
           <ul class="price-list">
-            <li><svg class="ic sm"><use href="#icon-check"/></svg>Unlimited discoveries, worldwide</li>
-            <li><svg class="ic sm"><use href="#icon-check"/></svg>See everyone who shares your exact birthday</li>
-            <li><svg class="ic sm"><use href="#icon-check"/></svg>Advanced filters: hospital, city, keywords</li>
-            <li><svg class="ic sm"><use href="#icon-check"/></svg>Priority placement in Discover</li>
-            <li><svg class="ic sm"><use href="#icon-check"/></svg>Read receipts &amp; verified badge</li>
+            <li><svg class="ic sm"><use href="#icon-check"/></svg>Unlimited messages &amp; searches</li>
+            <li><svg class="ic sm"><use href="#icon-check"/></svg>See who liked you</li>
+            <li><svg class="ic sm"><use href="#icon-check"/></svg>Advanced filters</li>
+            <li><svg class="ic sm"><use href="#icon-check"/></svg>Hide online status</li>
+            <li><svg class="ic sm"><use href="#icon-check"/></svg>No adverts</li>
+            <li><svg class="ic sm"><use href="#icon-check"/></svg>Priority in search</li>
+            <li><svg class="ic sm"><use href="#icon-check"/></svg>Up to 5 profile photos</li>
           </ul>
-          <a href="#waitlist" class="btn btn-primary btn-block">Get Premium</a>
+          <button type="button" class="btn btn-primary btn-block" data-open-modal>Get Premium</button>
         </div>
+      </div>
+      <p class="premium-free-note">Originly is free to join and use. Premium is entirely optional, and can be turned on whenever you're ready.</p>
+    </div>
+  </section>
+
+  <!-- PRIVACY -->
+  <section class="privacy-section">
+    <div class="wrap">
+      <p class="eyebrow center">Privacy</p>
+      <h2 class="h2 center">Your origin is <em>personal.</em></h2>
+      <p class="lede center">Originly is built around a simple idea: you decide what people can see, and what stays yours.</p>
+
+      <div class="privacy-grid">
+        <div class="privacy-card reveal" style="--delay:.03s">
+          <span class="privacy-icon"><svg class="ic"><use href="#icon-sliders"/></svg></span>
+          <h3>You're in control</h3>
+          <p>Choose exactly what's visible on your profile — hospital, birthday, city, all of it, or none of it.</p>
+        </div>
+        <div class="privacy-card reveal" style="--delay:.08s">
+          <span class="privacy-icon"><svg class="ic"><use href="#icon-lock"/></svg></span>
+          <h3>Visibility controls</h3>
+          <p>Decide who can discover you and what they see before a conversation starts.</p>
+        </div>
+        <div class="privacy-card reveal" style="--delay:.13s">
+          <span class="privacy-icon"><svg class="ic"><use href="#icon-flag"/></svg></span>
+          <h3>Report &amp; block</h3>
+          <p>Report or block anyone, anytime, directly from their profile or a conversation.</p>
+        </div>
+        <div class="privacy-card reveal" style="--delay:.18s">
+          <span class="privacy-icon"><svg class="ic"><use href="#icon-trash"/></svg></span>
+          <h3>Delete anytime</h3>
+          <p>You can delete your account and your data whenever you choose.</p>
+        </div>
+      </div>
+      <div class="privacy-link-row">
+        <a href="privacy.html">Read our full Privacy Policy <svg class="ic sm" style="display:inline;vertical-align:-3px;"><use href="#icon-chevron"/></svg></a>
       </div>
     </div>
   </section>
@@ -440,62 +872,71 @@
   <section class="faq" id="faq">
     <div class="wrap">
       <p class="eyebrow center">FAQ</p>
-      <h2 class="h2 center">Questions, <em>answered</em>.</h2>
+      <h2 class="h2 center">Questions, <em>answered.</em></h2>
 
       <div class="faq-list reveal">
         <div class="faq-item">
           <button class="faq-q" aria-expanded="false">
-            <span>How does Originly verify my birthplace and birthday?</span>
+            <span>What is Originly?</span>
             <svg class="ic faq-icon"><use href="#icon-plus"/></svg>
           </button>
-          <div class="faq-a">
-            <p>You can optionally confirm your hospital and birth date during sign-up. Verified profiles get a badge and are prioritized in Discover, but verification is never required to use Originly.</p>
-          </div>
+          <div class="faq-a"><p>Originly is a social discovery app that helps you find people who share where your life began — the same hospital, birthday, birthplace or hometown. It's built for friendships, connections and relationships alike.</p></div>
         </div>
         <div class="faq-item">
           <button class="faq-q" aria-expanded="false">
-            <span>Is my personal data safe?</span>
+            <span>Is Originly a dating app?</span>
             <svg class="ic faq-icon"><use href="#icon-plus"/></svg>
           </button>
-          <div class="faq-a">
-            <p>Yes. Your origin details are encrypted, visible only to people you match with, and we never sell your data. Privacy is core to how Originly is built.</p>
-          </div>
+          <div class="faq-a"><p>Not exclusively. Originly can lead to friendships, relationships, reconnecting with people from your roots, or simply new social connections — it's built around shared origin, not one specific outcome.</p></div>
         </div>
         <div class="faq-item">
           <button class="faq-q" aria-expanded="false">
-            <span>Is Originly free to use?</span>
+            <span>Can I find someone born in the same hospital?</span>
             <svg class="ic faq-icon"><use href="#icon-plus"/></svg>
           </button>
-          <div class="faq-a">
-            <p>Yes — the core experience is free forever. Premium is optional and unlocks unlimited discoveries, advanced filters, and more ways to find your people faster.</p>
-          </div>
+          <div class="faq-a"><p>Yes. Birth hospital is one of Originly's core discovery filters, alongside birthplace, birthday, hometown and current city.</p></div>
         </div>
         <div class="faq-item">
           <button class="faq-q" aria-expanded="false">
-            <span>What if no one shares my exact origin?</span>
+            <span>Can I find someone with the same birthday?</span>
             <svg class="ic faq-icon"><use href="#icon-plus"/></svg>
           </button>
-          <div class="faq-a">
-            <p>Originly automatically widens your circle — nearby hospitals, the same birth week, or a similar life story — so you're never left without matches.</p>
-          </div>
+          <div class="faq-a"><p>Yes. You can discover people who share your exact date of birth as one of Originly's discovery filters.</p></div>
         </div>
         <div class="faq-item">
           <button class="faq-q" aria-expanded="false">
-            <span>Can I hide my exact hospital or birthday?</span>
+            <span>Can I search by city?</span>
             <svg class="ic faq-icon"><use href="#icon-plus"/></svg>
           </button>
-          <div class="faq-a">
-            <p>Absolutely. You choose what's visible — show just your city and birth month, or the full details. You're always in control of what others see.</p>
-          </div>
+          <div class="faq-a"><p>Yes. You can search by birth city, hometown, current city or distance — Originly supports advanced location-based filters, including gender and LGBTQ+ filters.</p></div>
         </div>
         <div class="faq-item">
           <button class="faq-q" aria-expanded="false">
-            <span>How is this different from regular dating apps?</span>
+            <span>Is Originly free?</span>
             <svg class="ic faq-icon"><use href="#icon-plus"/></svg>
           </button>
-          <div class="faq-a">
-            <p>Instead of starting with a photo and a swipe, every conversation on Originly starts with something real: the same hospital, the same birthday, or a story that mirrors your own.</p>
-          </div>
+          <div class="faq-a"><p>Yes, Originly is free to join and use. Premium is optional and adds extra features for £6.99/month.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span>What does Premium include?</span>
+            <svg class="ic faq-icon"><use href="#icon-plus"/></svg>
+          </button>
+          <div class="faq-a"><p>Premium unlocks unlimited messages and searches, seeing who liked you, advanced filters, hiding your online status, no adverts, priority placement in search, and up to 5 profile photos — all for £6.99/month.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span>When is Originly launching?</span>
+            <svg class="ic faq-icon"><use href="#icon-plus"/></svg>
+          </button>
+          <div class="faq-a"><p>Originly is coming soon. We're putting the finishing touches on the app ahead of launch on the App Store.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span>How do I get early access?</span>
+            <svg class="ic faq-icon"><use href="#icon-plus"/></svg>
+          </button>
+          <div class="faq-a"><p>Email <a href="mailto:info@originlyapp.com?subject=Originly%20Early%20Access">info@originlyapp.com</a> and we'll make sure you're one of the first to get your link when we launch.</p></div>
         </div>
       </div>
     </div>
@@ -503,14 +944,15 @@
 
   <!-- FINAL CTA -->
   <section class="final-cta" id="waitlist">
-    <div class="wrap reveal">
-      <h2 class="h2 center">Your people are<br>waiting to be <em>found</em>.</h2>
-      <p class="center lede">Join the waitlist and be first to find the people who share your origin.</p>
-      <form class="waitlist-form" id="waitlistForm">
-        <input type="email" required placeholder="you@example.com" aria-label="Email address">
-        <button type="submit" class="btn btn-primary">Get Originly</button>
-      </form>
-      <p class="form-note" id="formNote" aria-live="polite"></p>
+    <div class="digit-field" data-digits="6" aria-hidden="true"></div>
+    <div class="wrap final-cta-inner reveal">
+      <h2 class="h2 center">Your story started <em>somewhere.</em></h2>
+      <p class="lede center">Discover who shares it.</p>
+      <button type="button" class="btn btn-primary" data-open-modal>Get Originly</button>
+      <p class="final-cta-contact">
+        <span class="final-cta-soon">Coming soon</span><br>
+        <a href="mailto:info@originlyapp.com?subject=Originly%20Early%20Access">info@originlyapp.com</a>
+      </p>
     </div>
   </section>
 </main>
@@ -527,13 +969,39 @@
     <div class="footer-links">
       <a href="#features">Features</a>
       <a href="#how">How It Works</a>
-      <a href="#compare">Compare</a>
       <a href="#premium">Premium</a>
       <a href="#faq">FAQ</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Use</a>
+      <a href="contact.html">Contact</a>
     </div>
+    <a class="footer-email" href="mailto:info@originlyapp.com?subject=Originly%20Early%20Access">info@originlyapp.com</a>
     <p class="footer-copy">© <span id="year"></span> Originly. All rights reserved.</p>
   </div>
 </footer>
+
+<!-- GET ORIGINLY MODAL -->
+<div class="modal-overlay" id="modalOverlay" role="presentation">
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle" id="modalCard">
+    <button class="modal-close" id="modalClose" aria-label="Close dialog">
+      <svg class="ic sm"><use href="#icon-close"/></svg>
+    </button>
+    <span class="modal-mark" aria-hidden="true">
+      <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" stroke-width="6"/><path d="M35 62 Q35 38 60 38 Q72 38 72 50 Q72 62 60 62 Q52 62 52 54" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round"/></svg>
+    </span>
+    <p class="modal-eyebrow">Originly is coming soon</p>
+    <h2 id="modalTitle">We're putting the finishing touches on Originly.</h2>
+    <p>Be one of the first to get your link when we launch.</p>
+    <span class="modal-store-note"><svg class="ic sm"><use href="#icon-apple"/></svg>Coming soon on the App Store</span>
+    <div class="modal-email-row">
+      <a href="mailto:info@originlyapp.com?subject=Originly%20Early%20Access" id="modalEmailLink">info@originlyapp.com</a>
+      <button type="button" class="modal-copy-btn" id="modalCopyBtn" aria-label="Copy email address">
+        <svg class="ic sm"><use href="#icon-copy"/></svg>
+      </button>
+    </div>
+    <p class="modal-copy-msg" id="modalCopyMsg" aria-live="polite"></p>
+  </div>
+</div>
 
 <script src="assets/js/main.js"></script>
 </body>
